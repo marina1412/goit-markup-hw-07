@@ -1,0 +1,21 @@
+.section {
+  padding-bottom: 94px;
+  padding-top: 94px;
+}
+.section__title {
+  margin-bottom: 50px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+
+  color: var(--title-color);
+}
+.section__title--hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
