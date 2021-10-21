@@ -4,10 +4,8 @@
 }
 .section__title {
   margin-bottom: 50px;
+  @include fonts(700, 36px, 1.17, 0.03em);
 
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
   text-align: center;
 
   color: var(--title-color);

@@ -1,7 +1,5 @@
 .modal__title {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
+  @include fonts(700, 20px, 1.15, 0.03em);
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-color);

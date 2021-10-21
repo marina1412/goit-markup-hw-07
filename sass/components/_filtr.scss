@@ -5,14 +5,15 @@
 }
 .filtr__item {
   margin-right: 8px;
-}
-.filtr__item:last-child {
-  margin-right: 0;
+  &:last-child {
+    margin-right: 0;
+  }
 }
 .filtr__button {
   background-color: (--fone-color);
   color: (--title-color);
   font-family: inherit;
+  @include fonts(500, 16px, 1.63, 0.03em);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
@@ -22,17 +23,12 @@
   padding: 6px 22px;
   border: transparent;
   border-radius: 4px;
-  font-family: inherit;
-
-  transition-property: background-color, color, box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.filtr__button:focus,
-.filtr__button:hover {
-  background-color: var(--accent-color);
-  color: var(--primary-title-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+  @include animation($property: background-color box-shadow);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--primary-title-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
 }

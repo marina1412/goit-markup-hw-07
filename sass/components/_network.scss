@@ -4,9 +4,9 @@
 
 .network-list__item {
   margin-right: 10px;
-}
-.network-list__item:last-child {
-  margin-right: 0px;
+  &:last-child {
+    margin-right: 0px;
+  }
 }
 .network-list__link {
   display: flex;
@@ -15,27 +15,21 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  @include animation($property: background-color);
 
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
 }
-
 .network-list__icon {
   height: 20px;
   width: 20px;
   fill: var(--icon-color);
+  @include animation($property: fill);
 
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.network-list__link:hover,
-.network-list__link:focus {
-  background-color: var(--accent-color);
-}
-.network-list__link:hover .network-list__icon,
-.network-list__link:focus .network-list__icon {
-  fill: var(--primary-title-color);
+  .network-list__link:hover &,
+  .network-list__link:focus & {
+    fill: var(--primary-title-color);
+  }
 }

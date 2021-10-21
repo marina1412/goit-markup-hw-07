@@ -1,10 +1,8 @@
 .logo {
   display: block;
 
-  font-family: Raleway, sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
+  font-family: var(--logo-font);
+  @include fonts(700, 26px, 1.2, 0.03em);
   color: var(--second-logo-color);
   padding-top: 24px;
   padding-bottom: 25px;

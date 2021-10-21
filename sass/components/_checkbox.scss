@@ -17,6 +17,16 @@
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+  &:checked {
+    @include animation($property: background-color background-image);
+    & + .checkbox__icon {
+      background-color: var(--accent-color);
+      background-image: url('../images/icon-check.svg');
+      background-size: contain;
+      background-origin: border-box;
+      border: transparent;
+    }
+  }
 }
 .checkbox__icon {
   display: inline-block;
@@ -27,26 +37,12 @@
   margin-right: 8.38px;
 }
 .checkbox__label {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7;
-  letter-spacing: 0.03em;
+  @include fonts(400, 14px, 1.7, 0.03em);
   color: var(--text-color);
   align-self: center;
 }
 
-.checkbox__input:checked + .checkbox__icon {
-  background-color: var(--accent-color);
-  background-image: url("../images/icon-check.svg");
-  background-size: contain;
-  background-origin: border-box;
-  border: transparent;
-}
 .checkbox__label--current {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7;
-  letter-spacing: 0.03em;
   text-decoration-line: underline;
   color: var(--accent-color);
 }

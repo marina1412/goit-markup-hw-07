@@ -2,9 +2,6 @@
   background-color: var(--fone-color);
 }
 
-.team-title {
-  color: var(--title-color);
-}
 .team {
   display: flex;
 }
@@ -19,9 +16,9 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-}
-.team__item:first-child {
-  margin-left: 0;
+  &:first-child {
+    margin-left: 0;
+  }
 }
 .team__div {
   padding-top: 30px;
@@ -29,15 +26,13 @@
   background-color: var(--primary-title-color);
 }
 .team__title {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
+  @include fonts(500, 16px, 1.19, 0.03em);
   margin-bottom: 10px;
+  color: var(--title-color);
 }
 
 .team__text {
-  font-size: 16px;
-  line-height: 1.19;
+  @include fonts(400, 16px, 1.19, 0.03em);
 }
 .network-list--team {
   justify-content: center;

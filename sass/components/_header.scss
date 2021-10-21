@@ -1,7 +1,5 @@
 .header {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.2;
+  @include fonts(500, 14px, 1.2, 0.03em);
   border-bottom: solid 1px var(--border-header);
 }
 .header__nav {
@@ -12,14 +10,13 @@
 }
 .sitenav {
   display: flex;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+  @include fonts(500, 14px, 1.86, 0.02em);
 }
 .sitenav__item {
   margin-right: 50px;
-}
-.sitenav__item:last-child {
-  margin-right: 0;
+  &:last-child {
+    margin-right: 0;
+  }
 }
 .sitenav__link {
   position: relative;
@@ -28,28 +25,25 @@
   padding-bottom: 32px;
 
   color: var(--title-color);
-
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.sitenav__link:hover,
-.sitenav__link:focus {
-  color: var(--accent-color);
+  @include animation($property: color);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 .sitenav__link--current {
   position: relative;
   color: var(--accent-color);
-}
-.sitenav__link--current::after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 4px;
-  bottom: -1px;
-  right: 0;
-  background-color: var(--accent-color);
-  border-radius: 3px;
+  &::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 4px;
+    bottom: -1px;
+    right: 0;
+    background-color: var(--accent-color);
+    border-radius: 3px;
+  }
 }
 .contacts {
   display: flex;
@@ -58,14 +52,13 @@
 
   margin-left: auto;
 
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+  @include fonts(500, 14px, 1.14, 0.02em);
 }
 .contacts__item {
   margin-right: 50px;
-}
-.contacts__item:last-child {
-  margin-right: 0;
+  &:last-child {
+    margin-right: 0;
+  }
 }
 .contacts__link {
   display: flex;
@@ -74,14 +67,12 @@
   color: var(--text-color);
   padding-top: 32px;
   padding-bottom: 32px;
+  @include animation($property: color);
 
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.contacts__link:hover,
-.contacts__link:focus {
-  color: var(--accent-color);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 .contacts__icon {
   margin-right: 10px;

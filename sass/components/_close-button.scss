@@ -16,13 +16,11 @@
   width: 18px;
   height: 18px;
   fill: var(--second-logo-color);
+  @include animation($property: fill cursor);
 
-  transition-property: fill, cursor;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.close-button__icon:hover,
-.close-button__icon:focus {
-  fill: var(--accent-color);
-  cursor: pointer;
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+    cursor: pointer;
+  }
 }

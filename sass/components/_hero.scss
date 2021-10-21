@@ -17,25 +17,19 @@
 }
 .hero__title {
   margin-bottom: 30px;
+  @include fonts(900, 44px, 1.4, 0.06em);
 
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.4;
   text-align: center;
-  letter-spacing: 0.06em;
   text-transform: uppercase;
 
   color: var(--primary-title-color);
 }
 .hero__button {
   padding: 10px, 32px;
+  @include animation($property: background-color);
 
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hero__button:focus,
-.hero__button:hover {
-  background-color: var(--button-hover);
+  &:hover,
+  &:focus {
+    background-color: var(--button-hover);
+  }
 }
