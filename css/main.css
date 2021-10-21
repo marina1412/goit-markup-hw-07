@@ -850,6 +850,7 @@ img {
 
 .address__link {
   color: var(--footer-address);
+  font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.7;

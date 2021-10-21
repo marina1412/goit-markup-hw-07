@@ -33,6 +33,7 @@
 }
 .address__link {
   color: var(--footer-address);
+  font-style: normal;
   @include fonts(400, 14px, 1.7, 0.03em);
   @include animation($property: color);
   &:hover,
