@@ -2,23 +2,23 @@
   @include fonts(500, 14px, 1.2, 0.03em);
   border-bottom: solid 1px var(--border-header);
 }
-.header__nav {
+.header__container {
   display: flex;
 }
 .nav {
   display: flex;
 }
-.sitenav {
+.site-nav {
   display: flex;
   @include fonts(500, 14px, 1.86, 0.02em);
 }
-.sitenav__item {
+.site-nav__item {
   margin-right: 50px;
   &:last-child {
     margin-right: 0;
   }
 }
-.sitenav__link {
+.site-nav__link {
   position: relative;
   display: block;
   padding-top: 32px;
@@ -31,7 +31,7 @@
     color: var(--accent-color);
   }
 }
-.sitenav__link--current {
+.site-nav__link--current {
   position: relative;
   color: var(--accent-color);
   &::after {
